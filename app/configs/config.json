@@ -1,0 +1,67 @@
+﻿{
+  "BOT": {
+    "MATRIX_URL": "https://matrix.ru",
+    "METHOD_AUTH": "token",
+    "MATRIX_USER": "",
+    "MATRIX_PASSWORD": "",
+    "MATRIX_TOKEN": "",
+    "PERMIT_USERS": [
+      "@user:matrix.ru"
+    ],
+    "ROOM_ID": ""
+  },
+  "SERVERS": {
+    "IP_ADDRESS_LIST": [
+      "10.174.2.30",
+      "10.174.18.235",
+      "10.174.25.251",
+      "10.174.25.159",
+      "10.174.25.104"
+    ]
+  },
+  "COMMANDS": {
+    "HELP_COMMANDS": [
+      "справка",
+      "помощь",
+      "команды"
+    ],
+    "TEST_COMMANDS": [
+      "тест",
+      "бот работает?",
+      "проверить работу",
+      "диагностика"
+    ],
+    "SHUTDOWN_COMMANDS": [
+      "выключить",
+      "выключить все",
+      "выключить сервера",
+      "выкл"
+    ],
+    "NETWORK_COMMANDS": [
+      "выключить сеть",
+      "сеть",
+      "отрубить сеть"
+    ]
+  },
+  "NETWORK_DEVICES": [
+    {
+      "device_type": "cisco_ios_telnet",
+      "host": "",
+      "username": "",
+      "password": "",
+      "secret": "",
+      "port": 23,
+      "commands": [
+        "conf t",
+        "no ip route 10.172.18.0 255.255.255.0 10.174.3.1",
+        "ip route 10.172.18.0 255.255.255.0 null0",
+        "no ip route 10.172.25.0 255.255.255.0 10.174.3.1",
+        "ip route 10.172.25.0 255.255.255.0 null0",
+        "interface Vlan41",
+        "ip access-group acl_matrixbot in",
+        "exit",
+        "exit"
+      ]
+    }
+  ]
+}

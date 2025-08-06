@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  python-matrix-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: matrix-bot-shutdown-servers
+    container_name: matrix-bot-shutdown-servers
+    environment:
+      DOMAIN_USERNAME: ""
+      DOMAIN_PASSWORD: ""
+      TZ: "Europe/Moscow"
+    restart: unless-stopped
+    networks:
+      matrix-bot-shutdown-network:
+
+networks:
+  matrix-bot-shutdown-network:
+    external: true
+    driver: bridge

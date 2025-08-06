@@ -1,0 +1,1 @@
+pyinstaller.exe -F --noconsole --onefile  -n ElementBotShutdownServers app\main.py

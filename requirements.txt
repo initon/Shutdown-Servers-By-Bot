@@ -1,0 +1,2 @@
+simplematrixbotlib~=2.12.1
+pysmb~=1.2.10
